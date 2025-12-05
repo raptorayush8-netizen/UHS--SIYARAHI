@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UHS SIYARAHI NAUTAN — Official</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9fafe;
+      color: #1b2a49;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #1766dc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0a3b94;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      background: #0a3b94;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    header .brand img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    header .brand h1 {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    nav a {
+      margin-right: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    main { flex-grow: 1; }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid #dddfe6;
+    }
+
+    h2 {
+      color: #0a3b94;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      letter-spacing: 1.2px;
+      text-align: center;
+    }
+
+    /* Home Section */
+    #home .hero {
+      background: #1766dc;
+      color: white;
+      border-radius: 8px;
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 6px 15px rgba(23, 102, 220, 0.5);
+    }
+
+    #home .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    #home .hero p {
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    #home .hero button, #home .hero a.btn {
+      background: white;
+      color: #1766dc;
+      border: none;
+      padding: 12px 25px;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background 0.3s ease, color 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    #home .hero button:hover, #home .hero a.btn:hover {
+      background: #0a3b94;
+      color: white;
+    }
+
+    /* Staff Section */
+    #staff .staff-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .staff-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .staff-card h3 {
+      color: #1766dc;
+      margin-bottom: 6px;
+    }
+
+    /* Admission Form */
+    #admission form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    #admission form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #0a3b94;
+    }
+
+    #admission form input, #admission form select, #admission form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border: 1.8px solid #d5dce9;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      color: #1766dc;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      background: #0a3b94;
+      color: white;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      letter-spacing: 1.1px;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="logo.png" alt="UHS Siyarahi Logo" onerror="this.style.display='none'"/>
+    <h1>UHS SIYARAHI NAUTAN</h1>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#staff">Staff</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="wrap">
+    <div class="hero">
+      <h1>Govt School</h1>
+      <p>UHS Siyarahi Nautan — quality education with discipline.<br>Admissions open for current session.</p>
+      <button onclick="document.getElementById('admission').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+      <a class="btn" href="#contact">Contact Office</a>
+    </div>
+  </section>
+
+  <!-- STAFF UPDATED -->
+  <section id="staff" class="wrap">
+    <h2>Staff / टीम</h2>
+
+    <div class="staff-list">
+
+      <!-- Headmaster -->
+      <div class="staff-card">
+        <h3>Dr. Amit Kumar Mishra</h3>
+        <p>Headmaster</p>
+      </div>
+
+      <!-- All Teachers Added -->
+      <div class="staff-card"><h3>Rubi Praveen</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Gaurav Gagan</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Shweta Raj</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Pooja Kumari</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Md. Hifzur Rahman</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Salima Khatoon</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Lokesh kr. Ram</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Vijay Laxmi Kumari</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Mukesh Kr. Yadav</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Ranjan Mishra</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Anuradha Tripathi</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Tanisha Sen</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Priya Kumari</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Prabhakar Kumar</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Amrita Bala</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Rimjhim Kumari</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Manisha Kumari Rupam</h3><p>Teacher</p></div>
+      <div class="staff-card"><h3>Raam Samujh</h3><p>Teacher</p></div>
+
+    </div>
+  </section>
+
+  <!-- ADMISSION FORM (unchanged, full) -->
+  <section id="admission" class="wrap">
+    <h2>Admission Form</h2>
+
+    <form id="admissionForm" method="post" enctype="multipart/form-data" action="/apply">
+
+      <label for="student_name">Student Full Name *</label>
+      <input type="text" name="student_name" id="student_name" required />
+
+      <label for="father_name">Father's Name *</label>
+      <input type="text" name="father_name" id="father_name" required />
+
+      <label for="mother_name">Mother's Name</label>
+      <input type="text" name="mother_name" id="mother_name" />
+
+      <label for="dob">Date of Birth *</label>
+      <input type="date" name="dob" id="dob" required />
+
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender">
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="class_applied">Class Applying For *</label>
+      <select name="class_applied" id="class_applied" required>
+        <option value="">Select</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+
+      <label for="aadhar">Aadhar (optional)</label>
+      <input type="text" name="aadhar" id="aadhar" placeholder="xxxx xxxx xxxx" />
+
+      <label for="parent_email">Parent Email *</label>
+      <input type="email" name="parent_email" id="parent_email" required />
+
+      <label for="phone">Phone *</label>
+      <input type="text" name="phone" id="phone" placeholder="10-digit" required />
+
+      <label for="address">Address</label>
+      <textarea name="address" id="address" rows="3"></textarea>
+
+      <label for="birth_certificate">Birth Certificate (pdf/jpg/png) — optional</label>
+      <input type="file" name="birth_certificate" id="birth_certificate" accept=".pdf,.jpg,.jpeg,.png" />
+
+      <label for="photo">Student Photo (jpg/png) — optional</label>
+      <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" />
+
+      <label class="agree">
+        <input type="checkbox" name="declaration" value="Yes" required />
+        मैं सहमत हूँ / I agree
+      </label>
+
+      <button type="submit">Submit Application</button>
+      <button type="reset">Reset</button>
+      <div id="formMsg" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="wrap">
+    <h2>Contact Office</h2>
+    <p>address - Siyarahi, Nautan, Bettiah, West Champaran, Bihar - 845406</p>
+    <p>Phone: +91-8210087894 | Email: akmbth@gmail.com</p>
+  </section>
+
+</main>
+
+<footer>
+  <small>© UHS SIYARAHI NAUTAN — Official School Website by Aayush M.</small>
+</footer>
+
+</body>
+</html>
